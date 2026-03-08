@@ -631,5 +631,4 @@ The project includes a comprehensive test suite with Jest and React Testing Libr
 
 ## 👨‍💻 Author
 
-**Konstantinos.poulios**
-- Email: konstantinos.poulios@tron.de
+**tron4x**
