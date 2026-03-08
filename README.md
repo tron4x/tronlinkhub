@@ -5,6 +5,10 @@
 </p>
 
 <p align="center">
+  <img src="public/tronlinkhub.gif" alt="TRON LinkHub Demo" width="1024" />
+</p>
+
+<p align="center">
   <strong>A modern, containerized web application for managing and organizing your links and services in a beautiful, customizable dashboard.</strong>
 </p>
 
