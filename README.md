@@ -453,12 +453,6 @@ docker-compose down
 Deploy to Kubernetes using the included Helm chart:
 
 ```bash
-# Add your registry credentials
-kubectl create secret docker-registry externalregistry \
-  --docker-server=your-registry.com \
-  --docker-username=your-user \
-  --docker-password=your-password
-
 # Install the Helm chart
 helm install linkhub ./helm/linkhub \
   --namespace linkhub \
@@ -471,6 +465,8 @@ helm upgrade linkhub ./helm/linkhub \
   --namespace linkhub \
   --set image.tag="latest"
 ```
+
+> **Note:** A Docker registry username/password is **not required** as long as you use a public image (e.g., Docker Hub). You only need an `imagePullSecret` for private registries.
 
 **Helm chart features:**
 - Persistent Volume Claims for data storage
