@@ -401,53 +401,6 @@ npm start
 
 ## 🐳 Deployment
 
-### Docker
-
-Build and run the container directly:
-
-```bash
-# Build the Docker image
-docker build -t tronlinkhub:latest .
-
-# Run the container
-docker run -d \
-  --name tron-linkhub \
-  -p 3000:8080 \
-  -v linkhub-data:/data \
-  -e EDIT_MODE_PASSWORD=your-secure-password \
-  tronlinkhub:latest
-```
-
-**Key Docker features:**
-- Multi-stage build for optimized image size
-- Runs as non-root user for security
-- Health check endpoint included
-- Nginx as reverse proxy
-
-### Docker Compose
-
-The easiest way to run LinkHub:
-
-```bash
-# Create .env file with your password
-echo "EDIT_MODE_PASSWORD=your-secure-password" > .env
-
-# Start with Docker Compose
-docker-compose up -d
-
-# View logs
-docker-compose logs -f
-
-# Stop
-docker-compose down
-```
-
-**Features:**
-- Automatic restart policy
-- Health checks every 30 seconds
-- Persistent volume for data
-- Port mapping 3000:8080
-
 ### Kubernetes / Helm
 
 Deploy to Kubernetes using the included Helm chart:
@@ -607,23 +560,6 @@ Contributions are welcome! Please follow these steps:
 - Follow the existing code style
 - Add tests for new features
 - Update documentation as needed
-
-### 🧪 Testing
-
-The project includes a comprehensive test suite with Jest and React Testing Library:
-
-| Test Suite | Coverage |
-|------------|----------|
-| **useSiteTitle** | Title state management, loading, resetting |
-| **useEditMode** | Authentication flow, edit mode toggling |
-| **useKeyboardShortcuts** | Shortcut definitions, event dispatching |
-| **EmptyState** | Component rendering based on edit mode state |
-
-**Available test commands:**
-- `npm test` - Run all tests once
-- `npm run test:watch` - Run tests in watch mode for development
-- `npm run test:coverage` - Generate coverage report
-
 ---
 ## Author
 
