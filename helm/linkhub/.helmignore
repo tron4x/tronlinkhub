@@ -1,0 +1,20 @@
+# Patterns to ignore when building packages.
+.DS_Store
+.git/
+.gitignore
+.vscode/
+*.swp
+*.bak
+*.tmp
+*.orig
+*~
+.project
+.idea/
+*.tmproj
+.hg/
+.hgignore
+.bzr/
+.bzrignore
+.svn/
+# For CI
+.github/

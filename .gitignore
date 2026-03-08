@@ -40,7 +40,7 @@ yarn-error.log*
 src/
 
 # Helm Charts
-helm/
+#helm/
 
 # Configuration files
 *.mjs

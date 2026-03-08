@@ -21,13 +21,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - GitLab icon fully implemented
   - All icon handlers updated for seamless integration
 
+### Fixed
+- **Memory Leak Prevention**: Fixed potential memory leaks in custom hooks
+  - `useHeaderLinks.ts`: Replaced global `serverSaveTimeout` with `useRef` for proper cleanup
+  - `useContactInfo.ts`: Replaced global `serverSaveTimeout` with `useRef` for proper cleanup
+  - `useSiteTitle.ts`: Replaced global `serverSaveTimeout` with `useRef` for proper cleanup
+  - Added proper cleanup functions in `useEffect` to clear timeouts on unmount
+  - Ensures no orphaned setTimeout callbacks persist after component unmount
+- **Helm Chart Secret**: Fixed "secret not found" error in Kubernetes deployment
+  - `helm/linkhub v1.3.3`: Secret is now created with default password even when `editModePassword` is empty
+  - Uses default password "changeme" if not specified in values.yaml
+  - Prevents pod startup failures due to missing secret reference
+
 ---
 
 ## Version Overview
 
 | Version | Date | Highlights |
 |---------|------|------------|
-| 4.1.3 | 2026-03-08 | Header Links Update (GitLab, Slack) |
+| 4.1.3 | 2026-03-08 | Header Links Update (GitLab, Slack), Memory Leak Fixes |
 | 3.2.2 | - | NPM Packages Update, RKE2 Clusters |
 
 ---
