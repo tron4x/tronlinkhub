@@ -46,6 +46,8 @@ src/
 *.mjs
 *.yaml
 *.yml
+!**/Chart.yaml
+!**/values.yaml
 *.sh
 *.conf
 *.tgz
