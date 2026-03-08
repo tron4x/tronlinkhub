@@ -642,7 +642,7 @@ The project includes a comprehensive test suite with Jest and React Testing Libr
   <em>
     Tron Linkhub is developed and maintained by tron4x. While we strive for quality,<br/>
     bugs may occur. We actively monitor and address reported issues.<br/>
-    Your feedback helps make TronVid better! 🚀<br/>
+    Your feedback helps make Tron Linkhub better! 🚀<br/>
     <br/>
     Thank you for your support and feedback! 🙏
   </em>
