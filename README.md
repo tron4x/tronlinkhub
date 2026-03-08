@@ -628,7 +628,24 @@ The project includes a comprehensive test suite with Jest and React Testing Libr
 - `npm run test:coverage` - Generate coverage report
 
 ---
-
-## 👨‍💻 Author
-
 **tron4x**
+
+- GitHub: [@tron4x](https://github.com/tron4x)
+
+<p align="center">
+  Made with ❤️ by <a href="https://github.com/tron4x">tron4x</a>
+</p>
+<p align="center">
+  <em>
+    Tron Linkhub is developed and maintained by tron4x. While we strive for quality,<br/>
+    bugs may occur. We actively monitor and address reported issues.<br/>
+    Your feedback helps make TronVid better! 🚀<br/>
+    <br/>
+    Thank you for your support and feedback! 🙏
+  </em>
+</p>
+<p align="center">
+  <a href="https://github.com/tron4x/tronlinkhub/issues">Report Bug</a>
+  ·
+  <a href="https://github.com/tron4x/tronlinkhub/issues">Request Feature</a>
+</p>
