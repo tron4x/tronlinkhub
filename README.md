@@ -628,9 +628,12 @@ The project includes a comprehensive test suite with Jest and React Testing Libr
 - `npm run test:coverage` - Generate coverage report
 
 ---
+## Author
+
 **tron4x**
 
 - GitHub: [@tron4x](https://github.com/tron4x)
+---
 
 <p align="center">
   Made with ❤️ by <a href="https://github.com/tron4x">tron4x</a>
