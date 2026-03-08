@@ -466,7 +466,8 @@ helm upgrade linkhub ./helm/linkhub \
   --set image.tag="latest"
 ```
 
-> **Note:** A Docker registry username/password is **not required** as long as you use a public image (e.g., Docker Hub). You only need an `imagePullSecret` for private registries.
+> **Note:** The `tronlinkhub` image is public. A Docker registry username/password is therefore **not required**. 
+> You only need an `imagePullSecret` for private registries.
 
 **Helm chart features:**
 - Persistent Volume Claims for data storage
