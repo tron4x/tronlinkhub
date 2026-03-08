@@ -466,7 +466,7 @@ helm upgrade linkhub ./helm/linkhub \
   --set image.tag="latest"
 ```
 
-> **Note:** The `tronlinkhub` image is public. A Docker registry username/password is therefore **not required**. 
+> **Note:** The `tronlinkhub` image is public. A Docker registry username/password is therefore **not required**.<br>
 > You only need an `imagePullSecret` for private registries.
 
 **Helm chart features:**
