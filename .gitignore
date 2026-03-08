@@ -1,0 +1,97 @@
+# ============================================
+# TRON LinkHub - Nur Dokumentation veröffentlichen
+# Der Quellcode wird nicht auf GitHub geteilt
+# ============================================
+
+# Dependencies
+node_modules/
+
+# Next.js Build
+.next/
+out/
+.swc/
+*.tsbuildinfo
+
+# Environment variables (sensibel)
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============================================
+# QUELLCODE AUSSCHLIESSEN
+# ============================================
+
+# Source Code
+src/
+
+# Helm Charts
+helm/
+
+# Configuration files
+*.mjs
+*.yaml
+*.yml
+*.sh
+*.conf
+*.tgz
+
+# JavaScript/TypeScript
+*.js
+*.ts
+*.tsx
+*.jsx
+!.gitignore
+
+# JSON (außer package.json für Info)
+*.json
+
+# Docker
+Dockerfile
+docker-compose.yml
+docker-entrypoint.sh
+.dockerignore
+
+# Data directory
+data/
+
+# Nginx
+nginx.conf
+
+# Jest/Testing
+jest.config.js
+jest.setup.js
+
+# ESLint
+.eslintrc.json
+eslint.config.mjs
+
+# PostCSS/Tailwind
+postcss.config.js
+tailwind.config.js
+
+# TypeScript config
+tsconfig.json
+next-env.d.ts
+next.config.js
+
+# Package files (behalte package.json nicht)
+package.json
+package-lock.json
+
+# Debug
+debug-settings.js
