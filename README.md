@@ -450,6 +450,8 @@ helm install linkhub oci://ghcr.io/tron4x/charts/tronlinkhub \
 
 > **Important:** For OCI charts, always use the `oci://` prefix.
 > If you run `helm pull ghcr.io/...` you may get `Error: repo ghcr.io not found`.
+>
+> **Ingress note:** Always adjust `ingress.hosts`, `ingress.className`, `ingress.annotations`, and optionally `ingress.tls` to match your own environment/domain.
 
 > **Note:** The `tronlinkhub` image is public. A Docker registry username/password is therefore **not required**.<br>
 > You only need an `imagePullSecret` for private registries.
