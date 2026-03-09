@@ -437,6 +437,15 @@ helm install linkhub oci://ghcr.io/tron4x/charts/tronlinkhub \
   --namespace linkhub \
   --create-namespace \
   --set secret.data.EDIT_MODE_PASSWORD="your-secure-password"
+
+# Install and explicitly override Docker image + tag
+helm install linkhub oci://ghcr.io/tron4x/charts/tronlinkhub \
+  --version 1.3.3 \
+  --namespace linkhub \
+  --create-namespace \
+  --set image.repository=ghcr.io/tron4x/tronlinkhub \
+  --set image.tag=4.1.3 \
+  --set secret.data.EDIT_MODE_PASSWORD="your-secure-password"
 ```
 
 > **Important:** For OCI charts, always use the `oci://` prefix.
