@@ -46,6 +46,10 @@ src/
 *.mjs
 *.yaml
 *.yml
+!.github/
+!.github/workflows/
+!.github/workflows/*.yml
+!.github/workflows/*.yaml
 !**/Chart.yaml
 !**/values.yaml
 !**/templates/

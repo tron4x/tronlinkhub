@@ -1,0 +1,52 @@
+name: Publish Helm Chart (OCI)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "helm/linkhub/**"
+      - ".github/workflows/helm-oci-publish.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+env:
+  CHART_DIR: helm/linkhub
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Helm
+        uses: azure/setup-helm@v4
+
+      - name: Log in to GHCR
+        env:
+          GHCR_USER: ${{ github.actor }}
+          GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "${GHCR_TOKEN}" | helm registry login ghcr.io \
+            --username "${GHCR_USER}" \
+            --password-stdin
+
+      - name: Validate chart
+        run: |
+          helm lint "${CHART_DIR}"
+
+      - name: Package Helm chart
+        run: |
+          mkdir -p dist
+          helm dependency update "${CHART_DIR}"
+          helm package "${CHART_DIR}" --destination dist
+
+      - name: Push chart to GHCR as OCI
+        run: |
+          CHART_PACKAGE=$(ls dist/*.tgz)
+          helm push "${CHART_PACKAGE}" "oci://ghcr.io/tron4x"
