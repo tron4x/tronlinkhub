@@ -15,6 +15,7 @@ permissions:
 
 env:
   CHART_DIR: helm/linkhub
+  OCI_REPO: oci://ghcr.io/tron4x/charts
 
 jobs:
   publish:
@@ -28,12 +29,17 @@ jobs:
         uses: azure/setup-helm@v4
 
       - name: Log in to GHCR
-        env:
-          GHCR_USER: ${{ github.actor }}
-          GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          GHCR_TOKEN="${{ secrets.GHCR_TOKEN }}"
+
+          if [ -z "${GHCR_TOKEN}" ]; then
+            echo "ERROR: Secret GHCR_TOKEN is missing."
+            echo "Create a classic PAT for user 'tron4x' with: write:packages, read:packages"
+            exit 1
+          fi
+
           echo "${GHCR_TOKEN}" | helm registry login ghcr.io \
-            --username "${GHCR_USER}" \
+            --username "tron4x" \
             --password-stdin
 
       - name: Validate chart
@@ -49,4 +55,5 @@ jobs:
       - name: Push chart to GHCR as OCI
         run: |
           CHART_PACKAGE=$(ls dist/*.tgz)
-          helm push "${CHART_PACKAGE}" "oci://ghcr.io/tron4x"
+          echo "Publishing to ${OCI_REPO}"
+          helm push "${CHART_PACKAGE}" "${OCI_REPO}"
