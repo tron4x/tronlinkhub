@@ -89,7 +89,7 @@ Whether you're managing a homelab, a corporate infrastructure, or just want a pe
 
 ### ⌨️ Keyboard Shortcuts
 Navigate the dashboard like a pro with full keyboard support:
-- **/** - Focus search bar for instant tile filtering
+- **S** - Focus search bar for instant tile filtering
 - **E** - Toggle edit mode (requires authentication)
 - **N** - Create a new tile quickly (in edit mode)
 - **W** - Toggle web search bar visibility
