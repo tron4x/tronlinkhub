@@ -423,6 +423,25 @@ helm upgrade linkhub ./helm/linkhub \
   --set image.tag="latest"
 ```
 
+### Helm OCI (GHCR)
+
+The chart is also published as an OCI artifact on GHCR.
+
+```bash
+# Pull a specific chart version from GHCR (OCI)
+helm pull oci://ghcr.io/tron4x/charts/tronlinkhub --version 1.3.3
+
+# Install directly from GHCR (OCI)
+helm install linkhub oci://ghcr.io/tron4x/charts/tronlinkhub \
+  --version 1.3.3 \
+  --namespace linkhub \
+  --create-namespace \
+  --set secret.data.EDIT_MODE_PASSWORD="your-secure-password"
+```
+
+> **Important:** For OCI charts, always use the `oci://` prefix.
+> If you run `helm pull ghcr.io/...` you may get `Error: repo ghcr.io not found`.
+
 > **Note:** The `tronlinkhub` image is public. A Docker registry username/password is therefore **not required**.<br>
 > You only need an `imagePullSecret` for private registries.
 
