@@ -32,6 +32,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Documented hostname-based favicon lookup
   - Documented default favicon-first behavior with inherited fallback
   - Documented link/sub-link icon override modes
+  - Added beta availability note: favicon-related link/sub-link icon features are currently only available in `ghcr.io/tron4x/tronlinkhub-beta`
+    - https://github.com/tron4x/tronlinkhub/pkgs/container/tronlinkhub-beta
 
 ## [4.1.3] - 2026-03-08
 
