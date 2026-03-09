@@ -107,7 +107,24 @@ Navigate the dashboard like a pro with full keyboard support:
 - **Multiple Links per Tile** - Add multiple destinations to a single tile
 - **Drag & Drop Reordering** - Intuitive tile reordering in edit mode
 - **Icon Support** - Upload custom icons (SVG, PNG, JPEG, WebP) or use built-in emojis
+- **Website Favicons** - Automatically shows website favicons for tiles, links, and sub-links (with fallback)
 - **Predefined Colors** - Choose from 10 beautiful colors or use custom hex codes
+
+**How favicon detection works:**
+- The app reads the **hostname** from each URL.
+  - Example: `https://github.com/tron4x` → hostname is `github.com`
+- It then tries to load a favicon for that hostname.
+- If no favicon can be loaded, a fallback icon is used.
+
+**Default behavior for Link/Sub-Link icons:**
+- **Default = Favicon first** (for links and sub-links)
+- If the favicon is missing, invalid, or fails to load, the UI falls back to **inherited tile icon**
+- You can still override icon mode per link/sub-link:
+  - `Inherit`
+  - `Favicon`
+  - `Emoji`
+  - `Text`
+  - `Image URL`
 
 ### 🔗 Link Organization
 - **Header Links** - Quick access links in the header bar

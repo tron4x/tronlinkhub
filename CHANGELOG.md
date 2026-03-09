@@ -7,6 +7,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [Unreleased]
+
+### Added
+- **Website Favicon Component**: Introduced a reusable `WebsiteFavicon` component for URL-based favicon rendering.
+  - Supports multi-source favicon resolution
+  - Includes robust fallback handling
+
+### Changed
+- **Link/Sub-Link Icon Defaults**: Updated icon behavior for links and sub-links.
+  - Default behavior is now **favicon-first**
+  - If favicon is missing/invalid/unavailable, it automatically falls back to the **inherited tile icon**
+- **Per-Link Icon Modes**: Added explicit icon mode options for links and sub-links:
+  - `Inherit`, `Favicon`, `Emoji`, `Text`, `Image URL`
+
+### Improved
+- **Sub-Link Icon UX in Editor**: Simplified and clarified sub-link icon settings in the tile editor.
+  - Clearer mode selection labels
+  - Better inline guidance for inheritance/default behavior
+  - More intuitive icon input placeholders based on selected icon type
+
+### Documentation
+- **README Updated (English)**:
+  - Documented hostname-based favicon lookup
+  - Documented default favicon-first behavior with inherited fallback
+  - Documented link/sub-link icon override modes
+
 ## [4.1.3] - 2026-03-08
 
 ### Changed
