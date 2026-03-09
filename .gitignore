@@ -48,7 +48,8 @@ src/
 *.yml
 !**/Chart.yaml
 !**/values.yaml
-!**/templates
+!**/templates/
+!**/templates/**
 *.sh
 *.conf
 *.tgz
