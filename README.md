@@ -410,7 +410,7 @@ helm install linkhub oci://ghcr.io/tron4x/charts/tronlinkhub \
   --namespace linkhub \
   --create-namespace \
   --set image.repository=ghcr.io/tron4x/tronlinkhub \
-  --set image.tag=4.1.3 \
+  --set image.tag=4.1.4 \
   --set secret.data.EDIT_MODE_PASSWORD="your-secure-password"
 ```
 

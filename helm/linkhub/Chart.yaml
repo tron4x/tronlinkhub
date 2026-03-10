@@ -3,7 +3,7 @@ name: tronlinkhub
 description: A modern link dashboard for organizing and accessing your services
 type: application
 version: 1.3.3
-appVersion: "4.1.3"
+appVersion: "4.1.4"
 keywords:
   - dashboard
   - links

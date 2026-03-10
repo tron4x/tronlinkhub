@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [Unreleased]
+## [4.1.4] - 2026-03-10
 
 ### Added
 - **Website Favicon Component**: Introduced a reusable `WebsiteFavicon` component for URL-based favicon rendering.
@@ -26,6 +26,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Clearer mode selection labels
   - Better inline guidance for inheritance/default behavior
   - More intuitive icon input placeholders based on selected icon type
+- **Stability Hardening (Timers & Cleanup)**:
+  - `BackupRestoreModal`: centralized timeout tracking with cleanup on unmount to avoid delayed callbacks after modal close
+  - `useCustomTemplates`: added managed async event-dispatch timeout with unmount cleanup
+  - `useServerSettings`: refactored save debounce timer from module-global state to hook-local `useRef` to prevent cross-instance interference
+  - Removed several unused variables/imports exposed by lint checks to reduce editor warnings and improve maintainability
 
 ### Documentation
 - **README Updated (English)**:
@@ -67,6 +72,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 | Version | Date | Highlights |
 |---------|------|------------|
+| 4.1.4 | 2026-03-10 | Favicon-first link icons, stability hardening, cleanup improvements |
 | 4.1.3 | 2026-03-08 | Header Links Update (GitLab, Slack), Memory Leak Fixes |
 | 3.2.2 | - | NPM Packages Update, RKE2 Clusters |
 
