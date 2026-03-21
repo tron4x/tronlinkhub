@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [4.1.5] - 2026-03-21
+
+### Fixed
+- **Tile Size Consistency in Grid**: Improved visual consistency of tile heights in the grid/select layout.
+  - Updated tile wrapper containers in `TileGrid` to use `h-full`
+  - Prevents tiles from appearing with inconsistent card heights in some layouts
+
 ## [4.1.4] - 2026-03-10
 
 ### Added
@@ -72,6 +79,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 | Version | Date | Highlights |
 |---------|------|------------|
+| 4.1.5 | 2026-03-21 | Tile size consistency in grid/select layout |
 | 4.1.4 | 2026-03-10 | Favicon-first link icons, stability hardening, cleanup improvements |
 | 4.1.3 | 2026-03-08 | Header Links Update (GitLab, Slack), Memory Leak Fixes |
 | 3.2.2 | - | NPM Packages Update, RKE2 Clusters |

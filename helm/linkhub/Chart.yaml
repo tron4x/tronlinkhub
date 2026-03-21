@@ -2,8 +2,8 @@ apiVersion: v2
 name: tronlinkhub
 description: A modern link dashboard for organizing and accessing your services
 type: application
-version: 1.3.3
-appVersion: "4.1.4"
+version: 1.3.4
+appVersion: "4.1.5"
 keywords:
   - dashboard
   - links
@@ -14,3 +14,11 @@ maintainers:
 home: https://github.com/tron4x/tronlinkhub
 sources:
   - https://github.com/tron4x/tronlinkhub
+
+# OCI Annotations für GitHub Container Registry (GHCR)
+annotations:
+  org.opencontainers.image.source: "https://github.com/tron4x/tronlinkhub"
+  org.opencontainers.image.description: "A modern link dashboard for organizing and accessing your services"
+  org.opencontainers.image.licenses: "Apache-2.0"
+  org.opencontainers.image.title: "TronLinkHub Helm Chart"
+  org.opencontainers.image.url: "https://github.com/tron4x/tronlinkhub"

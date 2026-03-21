@@ -391,31 +391,39 @@ helm upgrade linkhub ./helm/linkhub \
 
 ### Helm OCI (GHCR)
 
-The chart is also published as an OCI artifact on GHCR.
+The chart is also published as an OCI artifact on GitHub Container Registry (GHCR).
 
 ```bash
 # Pull a specific chart version from GHCR (OCI)
-helm pull oci://ghcr.io/tron4x/charts/tronlinkhub --version 1.3.3
+helm pull oci://ghcr.io/tron4x/charts/tronlinkhub --version 1.3.4
 
 # Install directly from GHCR (OCI)
 helm install linkhub oci://ghcr.io/tron4x/charts/tronlinkhub \
-  --version 1.3.3 \
+  --version 1.3.4 \
   --namespace linkhub \
   --create-namespace \
   --set secret.data.EDIT_MODE_PASSWORD="your-secure-password"
 
 # Install and explicitly override Docker image + tag
 helm install linkhub oci://ghcr.io/tron4x/charts/tronlinkhub \
-  --version 1.3.3 \
+  --version 1.3.4 \
   --namespace linkhub \
   --create-namespace \
   --set image.repository=ghcr.io/tron4x/tronlinkhub \
-  --set image.tag=4.1.4 \
+  --set image.tag=4.1.5 \
   --set secret.data.EDIT_MODE_PASSWORD="your-secure-password"
+
+# Show chart info
+helm show chart oci://ghcr.io/tron4x/charts/tronlinkhub --version 1.3.4
+
+# Show default values
+helm show values oci://ghcr.io/tron4x/charts/tronlinkhub --version 1.3.4
 ```
 
-> **Important:** For OCI charts, always use the `oci://` prefix.
-> If you run `helm pull ghcr.io/...` you may get `Error: repo ghcr.io not found`.
+> **⚠️ Important:** For OCI charts, always use the `oci://` prefix.
+> If you run `helm pull ghcr.io/...` (without `oci://`) you will get `Error: repo ghcr.io not found`.
+>
+> **Note:** GitHub shows `docker pull ghcr.io/tron4x/charts/tronlinkhub:1.3.4` on the package page - this command does **NOT** work for Helm charts! Use the `helm` commands shown above instead.
 >
 > **Ingress note:** Always adjust `ingress.hosts`, `ingress.className`, `ingress.annotations`, and optionally `ingress.tls` to match your own environment/domain.
 
