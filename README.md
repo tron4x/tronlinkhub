@@ -33,7 +33,8 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
   <img src="https://img.shields.io/badge/Kubernetes-Ready-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes">
-  <img src="https://img.shields.io/badge/Helm-Chart-0F1689?style=for-the-badge&logo=helm&logoColor=white" alt="Helm">
+  <img src="https://img.shields.io/badge/Helm_Chart-v1.3.4-0F1689?style=for-the-badge&logo=helm&logoColor=white" alt="Helm Chart v1.3.4">
+  <img src="https://img.shields.io/badge/App_Version-4.1.5-green?style=for-the-badge&logo=docker&logoColor=white" alt="App Version 4.1.5">
   <img src="https://img.shields.io/badge/License-Apache%202.0-blue?style=for-the-badge" alt="License">
 </p>
 
