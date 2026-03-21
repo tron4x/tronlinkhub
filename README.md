@@ -127,10 +127,6 @@ Navigate the dashboard like a pro with full keyboard support:
   - `Text`
   - `Image URL`
 
-> **Beta Availability Notice**: The favicon-related link/sub-link icon features are currently available only in the beta container image:  
-> `ghcr.io/tron4x/tronlinkhub-beta`  
-> https://github.com/tron4x/tronlinkhub/pkgs/container/tronlinkhub-beta
-
 ### 🔗 Link Organization
 - **Header Links** - Quick access links in the header bar
 - **Contact Information** - Dedicated contact modal with multiple contact types
